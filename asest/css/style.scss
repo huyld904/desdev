@@ -149,11 +149,7 @@
 .slide-mark {
     width: 100%;
     position: absolute;
-    bottom: -10px;
-
-    img {
-        width: inherit;
-    }
+    bottom: -1px;
 }
 
 .project {
@@ -445,6 +441,11 @@
             line-height: 24px;
             text-align: left;
             width: 100%;
+
+            &:focus {
+                border: 1px solid #46c27f;
+                outline: none;
+            }
         }
 
         textarea {
@@ -455,6 +456,10 @@
             height: 160px;
             width: 100%;
             padding: 13px 16px 0 16px;
+            &:focus {
+                border: 1px solid #46c27f;
+                outline: none;
+            }
         }
 
         button {
