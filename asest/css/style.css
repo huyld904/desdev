@@ -324,7 +324,7 @@ button {
 .slide-mark {
   width: 100%;
   position: absolute;
-  bottom: -1px;
+  bottom: -3px;
 }
 
 .project {
