@@ -159,6 +159,10 @@ button {
   }
 }
 
+.header__nav .icon-search:hover {
+  cursor: pointer;
+}
+
 .header .icon {
   display: none;
 }
@@ -184,6 +188,7 @@ button {
 .header.sticky a,
 .header.sticky span {
   color: #000;
+  font-weight: 700;
 }
 
 .banner {
@@ -304,7 +309,7 @@ button {
   display: block;
 }
 
-.banner__btn button {
+.banner__btn a {
   text-transform: uppercase;
   background-color: transparent;
   color: #fff;
