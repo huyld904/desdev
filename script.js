@@ -35,9 +35,11 @@ document.querySelector(".banner__btn").addEventListener("click", function (e) {
 const dropMenu = document.querySelector(".header__nav");
 const dropMenuItems = document.querySelectorAll(".header-nav__item");
 const burger = document.querySelector(".icon");
+const overlay = document.querySelector(".overlay");
 const dropDown = function () {
    burger.addEventListener("click", () => {
       dropMenu.classList.toggle("drop__menu-active");
+      overlay.classList.remove("hidden");
    });
 };
 dropDown();
@@ -46,10 +48,27 @@ const removeDrop = function () {
    dropMenuItems.forEach((item) =>
       item.addEventListener("click", () => {
          dropMenu.classList.remove("drop__menu-active");
+         overlay.classList.add("hidden");
       })
    );
 };
 removeDrop();
+
+const closeMenu = function () {
+   dropMenu.classList.remove("drop__menu-active");
+   overlay.classList.add("hidden");
+};
+
+overlay.addEventListener("click", closeMenu);
+
+document.addEventListener("keydown", function (e) {
+   if (
+      e.key === "Escape" &&
+      !dropMenu.classList.contains("drop__menu-active")
+   ) {
+      closeMenu();
+   }
+});
 
 // Roll
 window.addEventListener("scroll", function () {
